@@ -3,7 +3,7 @@ import {ADD_MOVIES, ADD_TO_FAVOURITE,REMOVE_FROM_FAVOURITE,SET_SHOW_FAVOURITES} 
 const initialMoviesState={
     list:[],
     favourites:[],
-    showFavourite:false
+    showFavourites:false
 }
 export default function  movies (state=initialMoviesState,action)  {
           

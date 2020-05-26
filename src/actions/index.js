@@ -8,7 +8,10 @@
 
 export const ADD_MOVIES='ADD_MOVIES';
 
-export const ADD_FAVOURITE='ADD_FAVOURITE';
+export const ADD_TO_FAVOURITE='ADD_TO_FAVOURITE';
+
+
+export const REMOVE_FROM_FAVOURITE='REMOVE_FROM_FAVOURITE';
 
 // action creator
 export function addMovies (movies) {
@@ -20,7 +23,14 @@ export function addMovies (movies) {
 
 export function addFavourite (movies) {
     return {
-        type:ADD_FAVOURITE,
+        type:ADD_TO_FAVOURITE,
         movies 
+    }
+}
+
+export function removeFromFavourite(movie)  {
+    return {
+        type: REMOVE_FROM_FAVOURITE,
+        movie
     }
 }

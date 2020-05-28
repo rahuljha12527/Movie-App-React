@@ -1,5 +1,4 @@
 import React from 'react';
-import {data} from '../data';
 import { addMovieToList, handleMovieSearch} from '../actions';
 
 class Navbar extends React.Component {
@@ -7,7 +6,7 @@ class Navbar extends React.Component {
      super();
      this.state=
      {
-       showSearchResults:true,
+       
        searchText:''
      };
    }   
@@ -32,7 +31,7 @@ class Navbar extends React.Component {
    }
 
    render(){
-      const {showSearchResults}=this.state;
+      const {result,showSearchResults}=this.props.search;
     return (
         <div className="nav">
              
@@ -43,11 +42,11 @@ class Navbar extends React.Component {
                  showSearchResults &&
                  <div className='search-results'>
                      <div className='search-results'>
-                      <img src={data[0].Poster} alt='search-pic' />
+                      <img src={result.Poster} alt='search-pic' />
                       <div  className="movie-info">
 
-                      <span>{data[0].Title}</span>
-                      <button onClick={()=>this.handleAddToMovies(data[0])}>add to Movies</button>
+                      <span>{result.Title}</span>
+                      <button onClick={()=>this.handleAddToMovies(result)}>Add to Movies</button>
                       </div>
                       </div>
 
